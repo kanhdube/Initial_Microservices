@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <meta charset="utf-8">
+        <title> PMS System </title>
+        <script> 
+            $(document).ready(function() {
+                    $("#search").hide()
+                    $("#forSearch").click(function() {
+                         $("#search").show()
+                     });
+                     $("#btn").click(function(){
+                         console.log($("#str").val());
+                        $.post('/findReservation',{folio : $("#str").val()}, function(data, status) {
+                            alert("Data: " + data + "\nStatus: " + status);
+                        });
+                     });
+            });
+        </script>
+    </head>
+    <body>
+        <h2> Welcome to PMS system </h2>
+        <p><a href = "/rsrv_details.html">Create a Reservation</a></p>
+        <p id="forSearch"> <a href="#search">Search for an existing reservation</a></p>
+        <p id="search"> Enter folio# Or First Name : <input id="str" type="text" name="searchString">
+        <button type="button" id="btn"> Search </button>
+        </p>
+        
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta charset="utf-8">
+        <title> PMS System </title>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+        <div align = "center" >
+			<h2> Create/View a Reservation </h2>
+            <form action = "http://localhost:8000/reservations" method = "POST" target = "output">
+                Folio#	: <input type="text" name="folioNum"> <br/><br>
+                First Name	: <input type="text" name="firstName"> <br/><br>
+                Last Name	: <input type="text" name="lastName"> <br/><br>
+                Address	    : <input type="text" name="address"> <br/><br>
+                Checkin Date	: <input type="text" name="checkinDate"> <br/><br>
+                Checkout Date: <input type="text" name="checkoutDate"> <br/><br>
+                Rate Pgm     : <input type="text" name="ratePgm"> <br/><br>
+                Current Status     : <input type="text" name="status"> <br/><br>
+                Notes     : <input type="text" name="notes"> <br/><br>
+                <input type="submit" name="action" value="Create">
+            </form>
+        </div>
+    </body>
+</html>
